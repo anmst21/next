@@ -38,7 +38,9 @@ class CounterPage extends Component {
           "budget-page": true,
         })}
       >
-        Counter value: {this.props.counter.count}
+        <div className="counter-container">
+          Counter value: {this.props.counter.count}
+        </div>
         <button onClick={() => this.props.increment()}>+</button>
         <button onClick={() => this.props.decrement()}>-</button>
         <button onClick={() => this.props.reset()}>Reset</button>

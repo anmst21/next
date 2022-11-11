@@ -22,6 +22,10 @@ a {
 @import "./imports/variables";
 
 
+// pages
+@import "../pages/counter/index.scss";
+
+
 .line-hover {
     position: relative;
     overflow: hidden;
