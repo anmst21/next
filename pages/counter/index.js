@@ -39,7 +39,7 @@ class CounterPage extends Component {
         })}
       >
         <div className="counter-container">
-          Counter value: {this.props.counter.count}
+          1 Counter value: {this.props.counter.count}
         </div>
         <button onClick={() => this.props.increment()}>+</button>
         <button onClick={() => this.props.decrement()}>-</button>
