@@ -11,7 +11,10 @@ function MyApp({ Component, pageProps }) {
   let editPage = router.pathname.includes("edit");
   return (
     <Provider store={store}>
-      <div className="app">App</div>
+      <div className="app">
+        Header
+        <Component {...pageProps} />
+      </div>
     </Provider>
   );
 }
