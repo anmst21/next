@@ -8,6 +8,12 @@ import commaNumber from "comma-number";
 import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
 
+import {
+  increment,
+  decrement,
+  reset,
+} from "../../store/actions/counterActions";
+
 class CounterPage extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +38,10 @@ class CounterPage extends Component {
           "budget-page": true,
         })}
       >
-        Counter
+        Counter value: {this.props.counter.count}
+        <button onClick={() => this.props.increment()}>+</button>
+        <button onClick={() => this.props.decrement()}>-</button>
+        <button onClick={() => this.props.reset()}>Reset</button>
       </div>
     );
   }
@@ -44,4 +53,8 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, {})(withRouter(CounterPage));
+export default connect(mapStateToProps, {
+  increment,
+  decrement,
+  reset,
+})(withRouter(CounterPage));
